@@ -464,6 +464,7 @@ namespace Crystalbyte.UI {
         private void OnSourceInitialized(object sender, EventArgs e) {
             var helper = new WindowInteropHelper(this);
             _hwndSource = HwndSource.FromHwnd(helper.Handle);
+            _hwndSource.AddHook(WindowProc);
         }
 
         #endregion
